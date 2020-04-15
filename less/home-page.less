@@ -1,3 +1,19 @@
+.main-header{
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 2px dashed @navigation-border;
+
+        @media @phone{
+          max-width: 500px;
+          width: 90%;
+        }
+
+        h2{
+          padding-top: 2%;
+        }//this closes the h2 tag inside main header
+}//this closes main header
+
 .home {
 
   .content-section {
@@ -5,20 +21,38 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    // border: 1px solid red;
+
+      @media @phone{
+        flex-direction: column;
+        margin: 0 auto;
+
+      }
 
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @phone{
+        width: 100%;
+        padding-top: 5%;
+      }//media query inside text content
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @phone{
+        width: 100%;
+        padding: 0;
+      }
 
       img {
         border-radius: 10px;
+        @media @phone{
+          width: 100%;
+        }//media query for img
       }
     }
   }
@@ -26,10 +60,16 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    // border: 1px solid red;
+
+
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      order: -1;
+      // border: 1px solid red;
+
     }
 
     .img-content {
@@ -42,6 +82,11 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @phone{
+      width: 100%;
+      padding-top: 5%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +98,30 @@
     display: flex;
     justify-content: space-between;
 
+    @media @phone{
+      flex-direction: column;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
+
+      @media @phone{
+        width: 100%;
+        padding: 0 10%;
+      }
+
+      // new code begins//
+    .btn{
+      .custom-btn();
+
+      @media @phone{
+        .custom-btn(@button-bg: @eastern-blue, @size: 350px, @font-color: @main-bg)
+      }
+    }//.btn
+
+    }//.destination
+
+    
   }
 }// home

@@ -1,1 +1,42 @@
-// Navigation Styles here
+// Navigation Styles here//
+
+    nav{
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        .nav-style(row, space-between, center);
+        padding: 2% 0;
+        border-bottom: 2px dashed @navigation-border;
+
+        @media @phone{
+            max-width: 500px;
+            width: 100%;
+            .nav-style(column, center, center);
+        }//this closes media query in nav
+
+        .links{
+            width: 40%;
+            padding-right: 3%;
+            .nav-style(row, space-evenly, center);
+
+            @media @phone{
+                width: 100%;
+                padding: 2% 0% 0%;
+            }
+        
+            a{
+                color: @shark;
+                font-size: 1.6rem;
+                text-decoration: none;
+            }//this closes anchor tags inside links
+        }// this closes links inside nav
+    }// this closes navigation 
+
+
+
+
+
+
+
+
+
