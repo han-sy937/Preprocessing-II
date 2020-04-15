@@ -1,1 +1,21 @@
-// Mixins in here
+// Mixins in here//
+
+.nav-style( @direction:row, @justify:center, @align:center ){
+    display: flex;
+    flex-direction: @direction;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.custom-btn(@button-bg: @eastern-blue, @size: 200px, @font-color: @main-bg){
+    .nav-style(row, center, center);
+      background-color: @button-bg;
+      width: @size;
+      height: 45px;
+      font-size: 2rem;
+      border-radius: 12px;
+      color: @font-color;
+}
+
+
+
